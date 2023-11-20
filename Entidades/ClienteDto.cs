@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Listas.Servicios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -53,13 +54,13 @@ namespace Listas.Entidades
         override
             public string ToString()
         {
-            string clienteString = "Nombre: " + this.nombreCliente + " Apellidos: " + this.apellidosCliente +
-                " DNI: " + this.dniCliente +
-                " Fecha Nacimiento: " + this.fchNacimientoCliente +
-                " Email: " + this.emailCliente +
-                " Telefono: " + this.tlfCliente +
-                " Fecha Hoy: " + this.fchAltaCliente+
-                " Fecha Baja: " + this.fchBajaCliente ;
+            string clienteString = "Nombre: " + this.nombreCliente + " \nApellidos: " + this.apellidosCliente +
+                " \nDNI: " + this.dniCliente +
+                " \nFecha Nacimiento: " + this.fchNacimientoCliente +
+                " \nEmail: " + this.emailCliente +
+                " \nTelefono: " + this.tlfCliente +
+                " \nFecha Hoy: " + this.fchAltaCliente+
+                " \nFecha Baja: " + this.fchBajaCliente ;
 
             return clienteString;
         }

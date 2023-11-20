@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Listas.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,8 @@ namespace Listas.Servicios
     {
         //método darAltaCliente
         //public void darAltaCliente(List<ClienteDto>listaAntigua)
+        //creo un cliente
+        //
+        public void darAltaCliente(List<ClienteDto> listaAntigua);
     }
 }

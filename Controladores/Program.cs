@@ -8,20 +8,23 @@ namespace Listas.Controladores
     {
         static void Main(string[] args)
         {
-            ClienteDto cliente = new ClienteDto();
+            //lista para base de datos
+            List<ClienteDto> listaCliente = new List<ClienteDto>();
 
-            
-
-            //Llamada al método que imprime el mensaje por consola
+      
             InterfazMenu menuInterfaz = new ImplMenu();
+            ClienteInterfaz ci =new ClienteImplementacion();
+
+
             //Control de repetición menú
             bool cerrarMenu = false;
+
             //Opción sellecionada por usuario
             int opcionSeleccionada;
 
             menuInterfaz.mensajeBienvenida();
 
-            List<ClienteDto>listaCliente=new List<ClienteDto>();
+            
 
             /*El menú se mostrará tras cada selección y ejecución de esta mientras no se coja la opción 0 que es la que controla
              * el valor el boolean cerrarMenu
@@ -41,14 +44,18 @@ namespace Listas.Controladores
 
                     case 1:
                         Console.WriteLine("\n\tSe ejecuta el alta");
-                        Console.WriteLine("\n\tIntroduzca su nombre: ");
-                        cliente.NombreCliente=Console.ReadLine();
-                        listaCliente.Add(cliente.NombreCliente);
-                        
+                        ci.darAltaCliente(listaCliente);
+                        Console.Clear();
+
+                        foreach(ClienteDto cliente in listaCliente)
+                        {
+                            Console.WriteLine(cliente.ToString());
+                        }
                         break;
 
                     case 2:
                         Console.WriteLine("\n\t");
+                        
                         break;
 
                     case 3:
