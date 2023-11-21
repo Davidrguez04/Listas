@@ -31,7 +31,7 @@ namespace Listas.Servicios
             Console.WriteLine("Introduzca la fecha alta:");
             nuevoCliente.FchAlta = Convert.ToString(Console.ReadLine());
 
-
+            nuevoCliente.CodigoS = "CSI1SSXX";
             return nuevoCliente;
         }
 
