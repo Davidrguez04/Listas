@@ -1,0 +1,16 @@
+﻿using Listas.Entidades;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Listas.Servicios
+{
+    internal interface ClienteNuevoInterfaz
+    {
+        public void darAltaClienteNuevo(List<ClienteDto2> listaAntigua);
+
+       
+    }
+}

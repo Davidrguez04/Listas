@@ -26,6 +26,7 @@ namespace Listas.Servicios
             Console.WriteLine("\t\t\t\t|3.-Sacar Dinero            ");
             Console.WriteLine("\t\t\t\t|4.-Transferir Dinero            ");
             Console.WriteLine("\t\t\t\t|5.-Historial de operaciones            ");
+            Console.WriteLine("\t\t\t\t|6.-Dar de alta nuevo Cliente                     ");
             Console.Write("\n\tSeleccione una opción: ");
 
             opcion = Console.ReadKey(true).KeyChar - ('0');

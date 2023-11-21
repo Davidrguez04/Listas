@@ -1,4 +1,4 @@
-﻿/**/
+﻿
 using Listas.Entidades;
 using Listas.Servicios;
 
@@ -10,10 +10,12 @@ namespace Listas.Controladores
         {
             //lista para base de datos
             List<ClienteDto> listaCliente = new List<ClienteDto>();
+            List<ClienteDto2> listaCliente2 = new List<ClienteDto2>();
 
-      
+
             InterfazMenu menuInterfaz = new ImplMenu();
             ClienteInterfaz ci =new ClienteImplementacion();
+            ClienteNuevoInterfaz mi=new ClienteNuevoImpl();
 
 
             //Control de repetición menú
@@ -50,6 +52,7 @@ namespace Listas.Controladores
                         foreach(ClienteDto cliente in listaCliente)
                         {
                             Console.WriteLine(cliente.ToString());
+                            Console.WriteLine("\n");
                         }
                         break;
 
@@ -67,8 +70,29 @@ namespace Listas.Controladores
                         break;
 
                     case 5:
-                        Console.WriteLine("\n\tg");
+                        Console.WriteLine("\n\tMostar clientes registrados en banco");
+                        Console.Clear();
+                        foreach (ClienteDto2 cliente in listaCliente2)
+                        {
+                            Console.WriteLine(cliente.ToString());
+                            Console.WriteLine("\n");
+                        }
+                       
                         break;
+
+                    case 6:
+                        Console.WriteLine("\n\tNuevo Cliente:");
+                        mi.darAltaClienteNuevo(listaCliente2);
+                        Console.Clear();
+
+                        foreach(ClienteDto2 cliente in listaCliente2)
+                        {
+                            Console.WriteLine(cliente.ToString());
+                            Console.WriteLine("\n");
+                        }
+                        break;
+
+                   
 
                     default:
                         Console.WriteLine("\n\t[INFO]- La opción que has seleccionado no se encuentra dentro de los casos");
